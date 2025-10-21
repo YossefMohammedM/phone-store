@@ -1,42 +1,179 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.top-links-header {
+  border-right: 2px solid var(--accent-200);
+}
+.line-in-header {
+  width: 100%;
+  height: 1.5px;
+  background-color: var(--accent-200);
+}
+.dropdown-float ul {
+  border: 2px solid var(--primary-200);
+}
+.dropdown-float ul li {
+  padding: 15px;
+  border-bottom: 1px solid var(--accent-100);
+}
+.dropdown-float ul li:last-child {
+  border-bottom: none;
+}
+.dropdown-float ul li:hover {
+  background-color: var(--accent-200);
+  color: var(--primary-200);
+}
+.dropdown-float {
+  position: absolute !important;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: var(--bg-100);
+}
+.input-group span {
+  cursor: pointer;
+  border: 1px solid var(--bg-200);
+  padding: 10px 20px;
+  border-right: none;
+  position: relative;
+  border-radius: 5px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.input-group input {
+  border-left: none;
+  border-color: var(--bg-200);
+  width: 300px !important;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.modal-body .input-group input {
+  border-left: 1px solid var(--bg-200) !important;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-control:focus {
+  box-shadow: var(--box-shadow-100) !important;
+  border-color: var(--bg-200);
+}
+.form-control:focus::placeholder {
+  color: var(--text-100);
+}
+.input-group div {
+  position: absolute !important;
+  left: 120px;
+  top: 12px;
+  width: 2px;
+  height: 25px;
+  background-color: var(--bg-200);
+}
+.input-group button {
+  width: 60px !important;
+}
+.header .catigorise-header {
+  background-color: var(--primary-100);
+}
+.header_sub_menu {
+  position: absolute;
+  z-index: 9;
+  top: 100%;
+  left: 0;
+  visibility: hidden;
+  width: 230px;
+  margin: 25px 0 0;
+  padding: 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  background-color: var(--bg-100);
+  -webkit-box-shadow: var(--box-shadow-200);
+  box-shadow: var(--box-shadow-200);
+  border-radius: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+nav ul .header_sub_menu li {
+  color: var(--text-100) !important;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+  font-weight: 500;
+}
+.header_sub_menu li:hover {
+  color: var(--primary-200) !important;
+}
+nav ul .header_menu_items {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+nav ul .header_menu_items:hover .header_sub_menu {
+  visibility: visible;
+  opacity: 1;
+}
+nav ul .header_menu_items:hover {
+  color: var(--primary-200);
+}
+.header_menu_navigation ul li {
+  color: var(--accent-200);
+}
+nav ul .header_sub_menu p {
+  color: var(--accent-100);
 }
 
-.card {
-  padding: 2em;
+nav ul .header_menu_items:not(:last-child) {
+  border-right: 1px solid var(--accent-100);
 }
 
-.read-the-docs {
-  color: #888;
+.header_part_two .coll-body ul li {
+  border-bottom: 1px solid var(--accent-200);
+  padding: 10px;
+  cursor: pointer;
+}
+/* .header_part_two .coll-body ul li:first-child {
+  border-top: 1px solid var(--accent-200);
+} */
+.header_part_two .collapsible {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+
+.header_part_two .collapsible.open {
+  max-height: 300px;
+}
+
+.header_part_two .coll-body ul {
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+  overflow-y: auto;
+  max-height: 300px;
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+}
+.header_part_two .coll-body ul li {
+  color: var(--accent-100);
+}
+.header_part_two .coll-body ul li:hover {
+  color: var(--primary-200);
+}
+
+.header_part_two .coll-body ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+.header_part_two .coll-body ul::-webkit-scrollbar-thumb {
+  background-color: var(--accent-100);
+  border-radius: 10px;
+}
+.header_part_two .offcanvas-body .title {
+  border-bottom: 1px solid var(--accent-200);
+  padding: 10px;
+}
+.section-canvas .offcanvas-header,
+.section-canvas .offcanvas-body {
+  background-color: var(--bg-100) !important;
+}
+
+.input-group .dropdown-menu{
+  background-color: var(--bg-100);
+  border: 1px solid var(--accent-200);
+}
+.input-group .dropdown-menu li a{
+  color: var(--text-100) !important;
+}
+.input-group .dropdown-menu li a:hover{
+  background-color: var(--accent-200);
 }

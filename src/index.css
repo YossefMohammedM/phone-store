@@ -1,68 +1,60 @@
-
-
 @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
 :root {
   /* direction: rtl; */
 
-  --primary-100: #3b82f6;
-  --primary-200: #60a5fa;
-  --primary-300: #93c5fd;
+  /* primary */
 
-  /* Accent: Navy */
-  --accent-100: #1e3a8a;
-  --accent-200: #2563eb;
+  --primary-100: #1e2022;
+  --primary-200: #1a73e8;
+  --primary-300: #59a5f5;
 
-  /* Text */
-  --text-main: #0f172a; /* Main text */
-  --text-muted: #334155; /* Secondary */
-  --text-light: #0f172a33; /* Transparent text */
+  /* accent */
 
-  /* Backgrounds */
-  --bg-main: #f9fafb; /* Main background */
-  --bg-soft: #f1f5f9;
-  --bg-section: #e2e8f0;
-  --bg-main-50: rgba(249, 250, 251, 0.5);
-  --bg-section-50: rgba(226, 232, 240, 0.1);
+  --accent-100: #788189;
+  --accent-200: #e1e4e6;
 
-  /* Shadows */
-  --shadow-100: 0 1px 3px rgba(0, 0, 0, 0.05);
-  --shadow-200: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* text */
 
-  --shadow-accent-100: 0 2px 4px rgba(59, 130, 246, 0.25);
-  --shadow-accent-200: 0 6px 10px rgba(30, 58, 138, 0.2);
+  --text-100: #1e2022;
+  --text-200: #52616b;
 
+  /* bg */
+
+  --bg-100: #ffffff;
+  --bg-200: #c9d6df;
+  --bg-300: #bfc7d1;
+
+  --box-shadow-100: rgba(190, 158, 79, 0.2) 0px 2px 8px 0px;
+  --box-shadow-200: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 [data-theme="dark"] {
- /* Backgrounds */
-  --bg-main: #0f172a; /* Replace with deeper navy/blue-black */
-  --bg-soft: #1e293b;
-  --bg-section: #334155;
+  /* Backgrounds */
+  /* primary */
+  --primary-100: #f5f5f5; /* النصوص الفاتحة بدل الغامقة */
+  --primary-200: #1a73e8; /* ممكن نسيبه زي ما هو كـ Brand Color */
+  --primary-300: #59a5f5;
 
-  /* Text */
-  --text-main: #f9fafb; /* Light text */
-  --text-muted: #e2e8f0; 
-  --text-light: #f1f5f933;
+  /* accent */
+  --accent-100: #9aa0a6; /* نفس الـ accent بس أفتح بدرجة */
+  --accent-200: #2b2f31; /* بدل الرمادي الفاتح - نستخدم رمادي غامق مناسب للخلفيات */
 
-  /* Primary */
-  --primary-100: #60a5fa; /* Slightly brighter blue for dark mode */
-  --primary-200: #3b82f6;
-  --primary-300: #2563eb;
+  /* text */
+  --text-100: #f5f5f5; /* النص الأساسي */
+  --text-200: #c7c7c7; /* النص الثانوي */
 
-  /* Accent */
-  --accent-100: #93c5fd;
-  --accent-200: #60a5fa;
+  /* bg */
+  --bg-100: #121212; /* الخلفية الأساسية */
+  --bg-200: #1e1e1e; /* مستوى ثاني للخلفية */
+  --bg-300: #2a2a2a; /* مستوى ثالث */
 
-  /* Shadows */
-  --shadow-100: 0 1px 3px rgba(255, 255, 255, 0.05);
-  --shadow-200: 0 4px 6px rgba(255, 255, 255, 0.1);
-  --shadow-accent-100: 0 2px 4px rgba(96, 165, 250, 0.3);
-  --shadow-accent-200: 0 6px 10px rgba(147, 197, 253, 0.25);
+  --box-shadow-100: rgba(0, 0, 0, 0.4) 0px 2px 8px 0px;
+  --box-shadow-200: 0 10px 20px rgba(0, 0, 0, 0.6);
 }
 
 /* 🌐 Global Base Styles */
 body {
-  background-color: var(--bg-200);
+  background-color: var(--bg-100);
   color: var(--text-200);
   font-family: "Tajawal", sans-serif;
   font-weight: 400;
@@ -81,9 +73,19 @@ h6 {
   line-height: 1.3;
 }
 
+input{
+  background-color: var(--bg-100) !important;
+  color: var(--text-100) !important;
+}
+input::placeholder {
+  color: var(--text-100) !important;
+}
+
 p,
-label {
-  color: var(--text-200);
+label,
+div,
+a {
+  color: var(--text-100);
 }
 
 /* 🎨 Buttons */
@@ -122,33 +124,36 @@ button.btn-outline-primary:focus-visible {
 
 /* Secondary (Accent) */
 button.btn-secondary {
-  background-color: var(--accent-100);
+  background-color: var(--primary-200);
   color: var(--bg-100);
-  border: 1px solid var(--accent-100);
-  border-radius: 8px;
+  border: none;
+  border-radius: 5px;
   font-weight: 600;
   transition: all 0.2s ease-in-out;
+  padding: 16px;
 }
 button.btn-secondary:hover,
 button.btn-secondary:active,
 button.btn-secondary:focus-visible {
-  background-color: var(--accent-200);
-  border-color: var(--accent-200);
+  background-color: var(--primary-200);
+  color: var(--bg-100);
 }
 
 button.btn-outline-secondary {
-  border: 1px solid var(--accent-100);
-  color: var(--accent-100);
+  border: none;
+  outline: none;
+  color: var(--text-100);
+  background-color: transparent;
   border-radius: 8px;
   transition: all 0.2s ease-in-out;
 }
-button.btn-outline-secondary:hover,
+/* button.btn-outline-secondary:hover,
 button.btn-outline-secondary:active,
 button.btn-outline-secondary:focus-visible {
   border: 1px solid var(--accent-100);
   color: var(--bg-100);
   background-color: var(--accent-100);
-}
+} */
 
 /*  Shadows */
 .shadow-sm {
