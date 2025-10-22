@@ -5,7 +5,7 @@
   const Header = () => {
     return (
       <>
-        <div className="header py-2">
+        <div className="header mt-2">
           <RowOne />
           <div className="line-in-header mt-2"></div>
           <RowTwo />

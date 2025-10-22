@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Spice&family=Cairo:wght@200..1000&family=Noto+Sans+Tai+Viet&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+AU+SA:wght@100..400&family=Playwrite+RO:wght@100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&family=Story+Script&family=Underdog&family=Updock&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
   /* direction: rtl; */
 
@@ -56,10 +56,10 @@
 body {
   background-color: var(--bg-100);
   color: var(--text-200);
-  font-family: "Tajawal", sans-serif;
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  line-height: 1.6;
 }
 
 h1,
@@ -79,6 +79,10 @@ input{
 }
 input::placeholder {
   color: var(--text-100) !important;
+}
+
+.text-muted{
+  color: var(--text-200) !important;
 }
 
 p,
