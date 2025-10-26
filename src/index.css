@@ -111,7 +111,6 @@ button.btn-primary:focus-visible {
 
 button.btn-outline-primary {
   border: 1px solid var(--primary-100);
-  color: var(--primary-100);
   border-radius: 8px;
   transition: all 0.2s ease-in-out;
   width: 120px;

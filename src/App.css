@@ -187,13 +187,12 @@ nav ul .header_menu_items:not(:last-child) {
 @media (min-width: 1400px) {
   .home-page {
     height: calc(100vh - 330px) !important;
+  }
 }
-}
-@media (max-width:992px) {
-  .swiper-section{
+@media (max-width: 992px) {
+  .swiper-section {
     flex-direction: column !important;
-    gap:20px;
-    
+    gap: 20px;
   }
 }
 .home-page .searBox-newPhone {
@@ -204,42 +203,99 @@ nav ul .header_menu_items:not(:last-child) {
   overflow: hidden;
   background-color: #161616e8;
 }
-
-
-@media (min-width:769px) {
-  .swiper-pagination-bullet {
-  width: 24px !important;
-  height: 4px !important;
-  border-radius: 10px !important;
-  background: #ccc !important;
-  opacity: 0.5 !important;
+.swiper-pagination-bullet {
+  background: linear-gradient(90deg, #ff6a00, #ee0979) !important;
 }
-
-.swiper-pagination-bullet-active {
-  opacity: 1 !important;
-  width: 40px !important;
-  transition: all 0.3s ease !important;
-}
-   
 .swiper-pagination-bullet-active {
   background: linear-gradient(90deg, #ff6a00, #ee0979) !important;
-  box-shadow: 0 0 10px rgba(255, 106, 0, 0.5) !important;
+  padding: 5px;
 }
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ee0979 !important;
 }
 
-@media (max-width:769px){
-  .swiper-section{
+@media (min-width: 769px) {
+  .swiper-pagination-bullet {
+    width: 24px !important;
+    height: 4px !important;
+    border-radius: 10px !important;
+    opacity: 0.5 !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    opacity: 1 !important;
+    width: 40px !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    box-shadow: 0 0 10px rgba(255, 106, 0, 0.5) !important;
+    padding: 0;
+  }
+}
+
+@media (max-width: 769px) {
+  .swiper-section {
     padding-bottom: 10px !important;
   }
 }
 
-.servises-boxes{
+.servises-boxes {
   border: 1px solid var(--accent-200);
   border-radius: 5px;
 }
-.servises-boxes div{
+.servises-boxes div {
   transition: all 0.3s ease-in-out;
 }
-.servises-boxes div:hover{
+.servises-boxes div:hover {
   background-color: var(--bg-200);
+}
+
+.main-footer {
+  background-color: var(--bg-300) !important;
+}
+.main-footer .section-one,
+.main-footer .section-two{
+  border-bottom: 1px solid var(--accent-100);
+}
+.main-footer .input-group input{
+  width: 230px !important;
+}
+.main-footer .input-group input::placeholder {
+  color: var(--accent-100) !important;
+}
+.main-footer .input-group button{
+  width: fit-content !important;
+  font-size: 14px !important;
+}
+.main-footer .communication-links li a{
+  padding: 10px 13px !important;
+  border-radius: 50%;
+  background-color: var(--bg-100);
+  color: var(--accent-100) !important;
+  transition: all 0.3s ease-in-out;
+}
+.main-footer .communication-links li a:hover{
+  color: var(--bg-100) !important;
+}
+.main-footer .communication-links li:nth-child(1) a:hover {
+  background-color: #1877f2; 
+}
+
+.main-footer .communication-links li:nth-child(2) a:hover {
+  background-color: #e1306c; 
+}
+
+.main-footer .communication-links li:nth-child(3) a:hover {
+  background-color: #ff0000; 
+}
+.main-footer .communication-links li:last-child a {
+  padding: 10px 11px !important;
+}
+.main-footer .components-links li a{
+  transition: all 0.3s ease-in-out;
+}
+.main-footer .components-links li a:hover{
+  color: var(--primary-200) !important;
 }
