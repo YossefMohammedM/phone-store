@@ -176,3 +176,8 @@ button.btn-outline-secondary:focus-visible {
 .border-top {
   border-color: var(--bg-300) !important;
 }
+
+body.modal-open {
+  overflow: auto !important;
+  padding-right: 0 !important;
+}

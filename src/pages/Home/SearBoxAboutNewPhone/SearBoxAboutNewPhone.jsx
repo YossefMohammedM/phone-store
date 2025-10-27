@@ -61,7 +61,7 @@ const SearBoxAboutNewPhone = () => {
           {selectsData.map((select, idx) => (
             <div key={idx} className="mb-3">
               <select className="form-select p-2" aria-label={select.label}>
-                <option selected disabled>
+                <option value={select.label} disabled>
                   Select {select.label}
                 </option>
                 {select.options.map((opt, idx) => (
