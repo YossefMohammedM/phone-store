@@ -55,7 +55,7 @@ const Footer = () => {
               </p>
             </div>
             <div className="">
-              <div class="input-group p-2 mb-3">
+              <div className="input-group p-2 mb-3">
                 <input
                   type="email"
                   className="form-control"
@@ -64,7 +64,7 @@ const Footer = () => {
                   aria-describedby="button-addon2"
                 />
                 <button
-                  class="btn btn-primary p-2"
+                  className="btn btn-primary p-2"
                   type="button"
                   id="button-addon2"
                 >

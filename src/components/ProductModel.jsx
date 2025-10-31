@@ -3,14 +3,13 @@ import { fixImageUrl } from "../Ui/fixImageUrl";
 import { AiOutlineClose } from "react-icons/ai";
 
 const ProductModel = ({ selectedProduct }) => {
+  const [activeVariantIndex, setActiveVariantIndex] = useState(0);
 
-    const [activeVariantIndex, setActiveVariantIndex] = useState(0);
+  useEffect(() => {
+    setActiveVariantIndex(0);
+  }, [selectedProduct]);
 
-    useEffect(() => {
-      setActiveVariantIndex(0);
-    }, [selectedProduct]);
-
-    const activeVariant = selectedProduct?.variants?.[activeVariantIndex];
+  const activeVariant = selectedProduct?.variants?.[activeVariantIndex];
 
   return (
     <>
@@ -52,10 +51,10 @@ const ProductModel = ({ selectedProduct }) => {
                       </h3>
                       <div className="d-flex gap-3 align-items-center mt-2">
                         <p className="fw-bold mb-0">
-                          {activeVariant.price} EGP
+                          {activeVariant.priceAfterDiscount} EGP
                         </p>
                         <p className="text-muted mb-0 text-decoration-line-through">
-                          {activeVariant.priceAfterDiscount} EGP
+                          {activeVariant.price} EGP
                         </p>
                       </div>
                       <div className="d-flex justify-content-between">
