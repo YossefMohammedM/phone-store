@@ -1,12 +1,14 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import LayOut from "./components/LayOut";
+import LayOut from "./LayOuts/LayOut";
 import Home from "./pages/Home/Home";
 import Products from "./pages/Products/Products";
 import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
 import Verify from "./pages/Auth/Verify";
 import NotFound from "./pages/NotFound";
+import Dashboard from "./pages/DashBoard/Dashboard";
+import DashboardLayout from "./LayOuts/DashboardLayout";
 
 function App() {
   return (
@@ -15,6 +17,10 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/verify" element={<Verify />} />
+
+        <Route element={<DashboardLayout />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Route>
 
         <Route element={<LayOut />}>
           <Route path="/" element={<Home />} />

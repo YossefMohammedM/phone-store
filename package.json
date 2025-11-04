@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@nivo/bar": "^0.99.0",
+    "@nivo/pie": "^0.99.0",
     "axios": "^1.12.2",
     "bootstrap": "^5.3.8",
     "joi": "^18.0.1",
