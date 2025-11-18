@@ -9,6 +9,7 @@ import Verify from "./pages/Auth/Verify";
 import NotFound from "./pages/NotFound";
 import Dashboard from "./pages/DashBoard/Dashboard";
 import DashboardLayout from "./LayOuts/DashboardLayout";
+import Categorise from "./pages/DashBoard/Categorise/Categorise";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
 
         <Route element={<DashboardLayout />}>
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard/categorise" element={<Categorise />} />
         </Route>
 
         <Route element={<LayOut />}>

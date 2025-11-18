@@ -8,6 +8,7 @@ import { useContext } from "react";
 import { GoMoon } from "react-icons/go";
 import { ThemeModeContext } from "../../../../Ui/ThemeToggle";
 import { AiOutlineClose } from "react-icons/ai";
+import ItemsCart from "../../../ItemsCart";
 
 const PartOne = () => {
 
@@ -123,7 +124,10 @@ const PartOne = () => {
                     <AiOutlineClose size={25} />
                   </button>
                 </div>
-                <div className="offcanvas-body">No Items Added To Cart!?</div>
+                <div className="offcanvas-body">
+                  No Items Added To Cart!?
+                  <ItemsCart />
+                </div>
               </div>
             </div>
           </div>

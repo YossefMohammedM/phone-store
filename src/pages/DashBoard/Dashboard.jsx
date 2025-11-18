@@ -15,11 +15,11 @@ const Dashboard = () => {
               <li>Year</li>
             </ul>
             <Sales />
-            <div className="row mt-5">
-              <div className="col-8">
+            <div className="row gap-2 gap-xl-0 mt-5">
+              <div className="col-12 col-xl-8">
                 <BarChart />
               </div>
-              <div className="col-4">
+              <div className="col-12 col-xl-4">
                 <PieChart />
               </div>
             </div>

@@ -163,8 +163,8 @@ nav ul .header_menu_items:not(:last-child) {
   border-bottom: 1px solid var(--accent-200);
   padding: 10px;
 }
-.section-canvas .offcanvas-header,
-.section-canvas .offcanvas-body {
+ .offcanvas-header,
+ .offcanvas-body {
   background-color: var(--bg-100) !important;
 }
 
@@ -471,9 +471,10 @@ button:disabled {
   top: 0;
   left: 0;
   height: 100vh;
-  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
-rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+  rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
   z-index: 10;
+  overflow: auto;
 }
 
 .dashboard-main {
@@ -481,6 +482,11 @@ rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
   /* background-color: var(--bg-100);
   min-height: 100vh;
   overflow-y: auto; */
+}
+@media (max-width:991px) {
+  .dashboard-main{
+    margin-left: 0 !important;
+  }
 }
 
 
@@ -525,4 +531,88 @@ rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 .rect{
   display: flex !important;
   flex-direction: column !important;
+}
+
+.nav-dashboard .offcanvas{
+    width: 300px !important;
+  }
+
+
+
+.rdt_Table {
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
+  overflow: hidden !important;
+}
+
+.rdt_TableHeadRow {
+  background-color: var(--bg-200) !important;
+  font-size: 16px !important;
+}
+
+.rdt_TableCol {
+  color: var(--text-100) !important;
+}
+
+.rdt_TableRow {
+  background-color: var(--bg-100) !important;
+  padding:5px 0 !important;
+  font-size: 16px !important;
+  min-height: 60px !important;
+  border-bottom: 1px solid var(--accent-100) !important;
+}
+
+.rdt_TableRow:hover {
+  background-color: var(--accent-200) !important;
+}
+
+.rdt_Pagination {
+  background-color: var(--bg-200) !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  color: var(--text-100) !important;
+  border-bottom-left-radius: 12px !important;
+  border-bottom-right-radius: 12px !important;
+}
+
+.rdt_Pagination button {
+  color: var(--text-100) !important;
+  padding: 6px 12px !important;
+  border-radius: 6px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  font-size: 20px !important;
+  width: 45px !important;
+  height: 40px !important;
+}
+.rdt_Pagination button svg{
+  fill: var(--text-100) !important;
+}
+
+.rdt_Pagination button:hover {
+  background-color: var(--primary-200) !important;
+}
+.btn-edit,
+.btn-delete{
+  width: 40px !important;
+  transition: all 0.4s ease-in-out !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+.btn-edit:hover {
+  background-color: #ffc107 !important;
+  color: var(--bg-100) !important;
+}
+.btn-delete:hover {
+  background-color: red !important;
+  color: var(--bg-100) !important;
+}
+
+.main-category .btn-secondary{
+  padding: 5px 10px !important;
 }
